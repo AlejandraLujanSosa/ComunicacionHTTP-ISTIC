@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.comunicacionhttp_istic">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Clima"></activity>
+        <activity android:name=".MovieDetailsActivity"></activity>
+        <activity android:name=".Peliculas" />
+        <activity android:name=".Clima" />
         <activity android:name=".ConsultarDatos" />
         <activity android:name=".ListadoPaises" />
         <activity android:name=".MainActivity">

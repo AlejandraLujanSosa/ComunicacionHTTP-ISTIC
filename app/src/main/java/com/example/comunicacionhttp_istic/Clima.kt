@@ -2,6 +2,7 @@
 
 package com.example.comunicacionhttp_istic
 
+import android.annotation.SuppressLint
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
@@ -22,6 +23,7 @@ class Clima : AppCompatActivity() {
     var ciudadNombre: TextView? = null
     var searchButton: Button? = null
     var result: TextView? = null
+
 
     internal class Weather : AsyncTask<String?, Void?, String?>() {
         override fun doInBackground(vararg address: String?): String? {
