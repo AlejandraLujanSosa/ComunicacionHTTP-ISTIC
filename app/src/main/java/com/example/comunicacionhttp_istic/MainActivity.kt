@@ -1,20 +1,14 @@
 package com.example.comunicacionhttp_istic
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.StrictMode
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import com.example.comunicacionhttp_istic.ConsultaDatos.Companion.consultarDatos
+import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONArray
-import org.json.JSONObject
-import java.io.IOException
-import java.io.InputStream
-import java.net.HttpURLConnection
-import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 
@@ -76,6 +70,13 @@ class MainActivity : AppCompatActivity() {
         }else
         {
             Toast.makeText(this,"Sin Conexión",Toast.LENGTH_SHORT).show()
+        }
+
+        btnClima.setOnClickListener {
+
+            val intent: Intent = Intent(this, Clima::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
